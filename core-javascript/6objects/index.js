@@ -3,11 +3,11 @@
 
 // Question 1 : Delete keyword in Object
 
-const func = (function(a){
-    delete a;
-    return a;
-  })(5);
-  
+const func = (function (a) {
+  delete a;
+  return a;
+})(5);
+
 console.log(func);
 
 // Computed Properties
@@ -20,19 +20,19 @@ let person = {
 };
 
 // Accessing
-alert( bag.firstName );
-alert( bag[property] );
+alert(person.firstName);
+alert(person[property]);
 
 // Looping in Object
 
 let user = {
-    name: "Piyush",
-    age: 24,
-  };
-  
-  for (let key in user) {
-    alert( key );  // name, age
-    alert( user[key] ); // Piyush, 24
+  name: "Piyush",
+  age: 24,
+};
+
+for (let key in user) {
+  alert(key);  // name, age
+  alert(user[key]); // Piyush, 24
 }
 
 
@@ -45,21 +45,21 @@ console.log(obj);
 // Question 3 : Create a function multiplyByTwo(obj) that multiplies all numeric property values of obj by 2.
 
 let nums = {
-    a: 100,
-    b: 200,
-    title: "My nums"
+  a: 100,
+  b: 200,
+  title: "My nums"
 };
-  
-multiplyNumeric(menu);
+
+multiplyByTwo(nums)
 
 function multiplyByTwo(obj) {
-    for (let key in obj) {
-      if (typeof obj[key] == 'number') {
-        obj[key] *= 2;
-      }
+  for (let key in obj) {
+    if (typeof obj[key] == 'number') {
+      obj[key] *= 2;
     }
+  }
 }
-
+console.log(nums);
 
 // Question 4 : Output (Important)
 
@@ -76,8 +76,8 @@ console.log(a[b]);
 // Question 5 : JSON.Stringify and JSON.parse 
 
 const userOne = {
-    name : "piyush",
-    age : 87
+  name: "piyush",
+  age: 87
 };
 
 const strObj = JSON.stringify(userOne);
@@ -101,11 +101,11 @@ console.log(admin);
 // Question 8 : Output
 
 const settings = {
-    username: 'lydiahallie',
-    level: 19,
-    health: 90,
-  };
-  
+  username: 'lydiahallie',
+  level: 19,
+  health: 90,
+};
+
 const data = JSON.stringify(settings, ['level', 'health']);
 console.log(data);
 
@@ -113,13 +113,13 @@ console.log(data);
 // Question 9 : Output
 
 const shape = {
-    radius: 10,
-    diameter() {
-      return this.radius * 2;
-    },
-    perimeter: () => 2 * Math.PI * this.radius,
-  };
-  
+  radius: 10,
+  diameter() {
+    return this.radius * 2;
+  },
+  perimeter: () => 2 * Math.PI * this.radius,
+};
+
 console.log(shape.diameter());
 console.log(shape.perimeter());
 
@@ -127,17 +127,17 @@ console.log(shape.perimeter());
 // Question 10 : Destructuring in object
 
 let user = {
-    name:"Piyush",
-    age:24,
-    fullName : {
-        firstName : "Piyush",
-        lastName : "Agarwal"
-    }
+  name: "Piyush",
+  age: 24,
+  fullName: {
+    firstName: "Piyush",
+    lastName: "Agarwal"
+  }
 };
-  
+
 const name = "Roadside Coder"    // to change name or renaming
 
-const { fullName : {firstName} } = user;
+const { fullName: { firstName } } = user;
 
 console.log(firstName);
 
@@ -145,9 +145,9 @@ console.log(firstName);
 // Question 11 : Output
 
 function getItems(fruitList, ...args, favoriteFruit) {
-    return [...fruitList, ...args, favoriteFruit]
+  return [...fruitList, ...args, favoriteFruit]
 }
-  
+
 getItems(["banana", "apple"], "pear", "orange");
 
 
@@ -163,8 +163,8 @@ console.log(d.greeting);
 
 // Question 13 : Output
 
-console.log({a:1} == {a:1});
-console.log({a:1} === {a:1});
+console.log({ a: 1 } == { a: 1 });
+console.log({ a: 1 } === { a: 1 });
 
 
 // Question 14 : Output
@@ -207,18 +207,18 @@ multiply(value);
 // Question 17 : Output 
 
 function changeAgeAndReference(person) {
-    person.age = 25;
-    person = {
-      name: 'John',
-      age: 50
-    };
+  person.age = 25;
+  person = {
+    name: 'John',
+    age: 50
+  };
 
-    return person;
+  return person;
 }
 
 const personObj1 = {
-    name: 'Alex',
-    age: 30
+  name: 'Alex',
+  age: 30
 };
 
 const personObj2 = changeAgeAndReference(personObj1);
@@ -232,7 +232,7 @@ console.log(personObj2); // -> ?
 // Q - How to clone an object without referencing its keys to original object
 
 
-const obj = {a: 1 ,b: 2}
-const objclone = Object.assign({},obj);
+const obj = { a: 1, b: 2 }
+const objclone = Object.assign({}, obj);
 const objclone = JSON.parse(JSON.stringify(employee));
 const objclone = { ...obj };

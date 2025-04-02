@@ -3,7 +3,7 @@
 // Question 1 : Variable Shadowing
 
 function test() {
-  let a = "Hello";
+  let a = "Hi";
 
   if (true) {
     let a = "Hello"; // New value assigned
