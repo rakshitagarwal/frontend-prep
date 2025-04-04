@@ -55,13 +55,13 @@ person.getAge.call(person2);
 
 // Question 6 : Output
 
-var status = "😎";
+var status = "A";
 
 setTimeout(() => {
-  const status = "😍";
+  const status = "B";
 
   const data = {
-    status: "🥑",
+    status: "C",
     getStatus() {
       return this.status;
     },
@@ -94,7 +94,7 @@ for (let i = 0; i < animals.length; i++) {
 const array = ["a", "b"];
 const elements = [0, 1, 2];
 array.push.apply(array, elements);
-console.info(array);
+console.log(array);
 
 // Question 9 - Using apply to enhane built-in functions
 
@@ -106,7 +106,7 @@ console.log(Math.max.apply(null, numbers));
 // Question 10 : How will you Create a bound function
 
 function f() {
-  alert(this); // ?
+  console.log(this); // ?
 }
 
 let user = {
@@ -129,7 +129,7 @@ f();
 
 function checkPassword(success, failed) {
   let password = prompt("Password?", "");
-  if (password == "Roadside Coder") success();
+  if (password == "testpass") success();
   else failed();
 }
 
@@ -179,7 +179,7 @@ var person = {
 };
 
 var person2 = { age: 24 };
-person.getAge.call(person2);
+person.getAgeArrow.call(person2);
 person.getAge.call(person2);
 
 // Question 15 : Call Method Polyfill
