@@ -83,15 +83,6 @@ const CounterFn = () => {
   );
 };
 
-const ChildComponentFn = ({name, age}) => {
-  return (
-    <div>
-      <p>Name: {name}</p>
-      <p>Age: {age}</p>
-    </div>
-  );
-};
-
 // Parent Component
 class ParentComponent extends React.Component {
   render() {
@@ -111,6 +102,15 @@ class ChildComponent extends React.Component {
     );
   }
 }
+
+const ChildComponentFn = ({name, age}) => {
+  return (
+    <div>
+      <p>Name: {name}</p>
+      <p>Age: {age}</p>
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);

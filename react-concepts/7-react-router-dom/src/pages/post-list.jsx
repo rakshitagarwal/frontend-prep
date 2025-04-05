@@ -1,10 +1,10 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import PostCard from "../components/post-card";
-import {useLoaderData} from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 const PostList = () => {
-  const {data: posts} = useLoaderData();
+  const { data: posts } = useLoaderData();
 
   //   const [posts, setPosts] = useState([]);
   //   const [loading, setLoading] = useState(false);

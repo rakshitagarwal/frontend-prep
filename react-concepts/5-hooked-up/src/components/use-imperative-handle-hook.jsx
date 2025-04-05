@@ -1,5 +1,5 @@
 /* eslint-disable react/display-name */
-import {forwardRef, useImperativeHandle, useRef} from "react";
+import { forwardRef, useImperativeHandle, useRef } from "react";
 
 const UseImperativeHandleHook = () => {
   const childRef = useRef(null);

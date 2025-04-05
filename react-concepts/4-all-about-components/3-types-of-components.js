@@ -108,6 +108,7 @@ const MemoizedComponentFn = React.memo(() => {
   return <div>Pure Fn Component</div>;
 });
 
+// Higher Order Components (HOC)
 const withLoginFn = (WrappedComponent) => {
   return () => {
     function login() {

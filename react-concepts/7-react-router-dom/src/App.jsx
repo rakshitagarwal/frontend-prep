@@ -1,8 +1,8 @@
 import "./App.css";
-import {RouterProvider, createBrowserRouter} from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import AppLayout from "./layouts/app-layout";
 import Home from "./pages/home";
-import PostList, {postLoader} from "./pages/post-list";
+import PostList, { postLoader } from "./pages/post-list";
 import PostComments from "./pages/post-comments";
 import Error from "./components/error";
 import Login from "./components/login";

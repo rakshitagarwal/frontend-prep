@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import {createContext, useContext, useState} from "react";
+import { createContext, useContext, useState } from "react";
 
 const ThemeContext = createContext("light");
 const UserContext = createContext(null);
@@ -12,8 +12,8 @@ const UseContextHook = () => {
   };
 
   return (
-    <ThemeContext.Provider value={{theme, changeTheme}}>
-      <UserContext.Provider value={{isLoggedin: false}}>
+    <ThemeContext.Provider value={{ theme, changeTheme }}>
+      <UserContext.Provider value={{ isLoggedin: false }}>
         <div>
           <h3>
             <u>useContext Hook</u>
@@ -42,24 +42,24 @@ const UseContextHook = () => {
 
 // Prop Drilling
 // GrandparentComponent
-const GrandparentComponent = ({data}) => {
+const GrandparentComponent = ({ data }) => {
   return <ParentComponent data={data} />;
 };
 
 // ParentComponent
-const ParentComponent = ({data}) => {
+const ParentComponent = ({ data }) => {
   return <ChildComponent data={data} />;
 };
 
 // ChildComponent
-const ChildComponent = ({data}) => {
+const ChildComponent = ({ data }) => {
   return <GrandchildComponent data={data} />;
 };
 
 // GrandchildComponent
-const GrandchildComponent = ({data}) => {
-  const {theme, changeTheme} = useContext(ThemeContext);
-  const {isLoggedin} = useContext(UserContext);
+const GrandchildComponent = ({ data }) => {
+  const { theme, changeTheme } = useContext(ThemeContext);
+  const { isLoggedin } = useContext(UserContext);
 
   return (
     <div>

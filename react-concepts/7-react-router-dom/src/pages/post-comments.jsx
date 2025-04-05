@@ -1,13 +1,13 @@
 import axios from "axios";
-import {useEffect, useState} from "react";
-import {useNavigate, useParams} from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 const PostComments = () => {
   const [comments, setComments] = useState([]);
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const {postId} = useParams();
+  const { postId } = useParams();
   const navigate = useNavigate();
 
   const fetchData = async () => {

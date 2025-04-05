@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const PostCard = ({post}) => {
+const PostCard = ({ post }) => {
   return (
     <div
       style={{

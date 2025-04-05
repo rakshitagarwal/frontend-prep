@@ -1,4 +1,4 @@
-import {useEffect, useLayoutEffect, useState} from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 const UseEffectHook = () => {
   const [user, setUser] = useState({});

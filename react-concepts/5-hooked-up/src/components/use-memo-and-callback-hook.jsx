@@ -1,4 +1,4 @@
-import {useCallback, useMemo, useState} from "react";
+import { useCallback, useMemo, useState } from "react";
 
 const UseMemoAndCallbackHook = () => {
   const [counter, setCounter] = useState(0);

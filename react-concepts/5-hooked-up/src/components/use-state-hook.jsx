@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 
 const UseStateHook = () => {
   const [count, setCount] = useState(0);
@@ -11,8 +11,8 @@ const UseStateHook = () => {
   });
 
   const handleInputChange = (e) => {
-    const {name, value} = e.target;
-    setUserData({...userData, [name]: value});
+    const { name, value } = e.target;
+    setUserData({ ...userData, [name]: value });
   };
 
   const handleIncrement = () => {
