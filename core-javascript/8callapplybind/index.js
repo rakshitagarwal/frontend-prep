@@ -118,7 +118,7 @@ user.g();
 // Question 11 : Bind Chaining?
 
 function f() {
-  alert(this.name);
+  console.log(this.name);
 }
 
 f = f.bind({ name: "John" }).bind({ name: "Ann" });

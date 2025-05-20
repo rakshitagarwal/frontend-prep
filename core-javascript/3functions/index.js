@@ -107,7 +107,7 @@ multiply(...arr); // Spread operator
 // Question 8 : Callback
 
 function greeting(name) {
-  alert("Hello " + name);
+  console.log("Hello " + name);
 }
 
 function processUserInput(callback) {

@@ -20,8 +20,8 @@ let person = {
 };
 
 // Accessing
-alert(person.firstName);
-alert(person[property]);
+console.log(person.firstName);
+console.log(person[property]);
 
 // Looping in Object
 
@@ -31,8 +31,8 @@ let user = {
 };
 
 for (let key in user) {
-  alert(key);  // name, age
-  alert(user[key]); // Piyush, 24
+  console.log(key);  // name, age
+  console.log(user[key]); // Piyush, 24
 }
 
 

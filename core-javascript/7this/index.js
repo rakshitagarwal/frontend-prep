@@ -70,7 +70,7 @@ function makeUser() {
 
 let user = makeUser();
 
-alert(user.ref.name); // What's the result?
+console.log(user.ref.name); // What's the result?
 
 // Question 7 : What logs to console the following code snippet:
 
@@ -114,8 +114,8 @@ let calculator = {
 };
 
 calculator.read();
-alert(calculator.sum());
-alert(calculator.mul());
+console.log(calculator.sum());
+console.log(calculator.mul());
 
 // Question 10 : Output
 
